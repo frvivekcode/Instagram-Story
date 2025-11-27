@@ -13,6 +13,8 @@ var clutter=""
 
 var storiyan=document.querySelector(".storiyan")
 
+var h1=document.querySelector("h1")
+
 arr.forEach(function(elem,idx){
     clutter+=` <div class="story"><img  id="${idx}" src="${elem.dp} " alt=""></div>`
 })
@@ -23,11 +25,16 @@ storiyan.innerHTML=clutter
     console.log(arr[dets.target.id].story);
     document.querySelector("#full-screen").style.display="block"
     document.querySelector("#full-screen").style.backgroundImage=`url(${arr[dets.target.id].story})`
+    h1.innerHTML=""
+
 
     setTimeout(function(){
     document.querySelector("#full-screen").style.display="none"
+    h1.innerHTML="Instagram story"
+
 
     },4000)
+
 })
 
 
